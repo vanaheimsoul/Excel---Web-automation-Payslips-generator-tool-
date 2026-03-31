@@ -1,0 +1,65 @@
+:root {
+  --bg: #f6f7fb;
+  --text: #111827;
+  --card: #ffffff;
+  --border: #d1d5db;
+  --muted: #6b7280;
+  --brand: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, Arial, sans-serif;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid.cols-2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 960px) {
+  .grid.cols-2 {
+    grid-template-columns: 340px 1fr;
+  }
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: var(--brand);
+  color: white;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input[type='file'] {
+  width: 100%;
+}
